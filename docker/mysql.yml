@@ -1,0 +1,17 @@
+version: '3.3'
+
+services:
+  db:
+    image: mysql:5.7
+    restart: always
+    environment:
+      MYSQL_DATABASE: 'shedLock'
+      MYSQL_USER: 'shed-lock-test-user-8821'
+      # You can use whatever password you like
+      MYSQL_PASSWORD: 'aZ3yB3EHAuJMENk'
+      # Password for root access
+      MYSQL_ROOT_PASSWORD: 'MBZx8xQPv9BgyKS'
+    ports:
+      - '3006:3306'
+    expose:
+      - '3006'
